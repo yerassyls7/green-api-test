@@ -4,33 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GREEN-API Test</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<div class="container">
 
     <h1>GREEN-API</h1>
 
-    <p>Тестовое задание</p>
+    <div class="card">
 
-    <label>
-        ID Instance:
-        <input type="text" id="idInstance">
-    </label>
+        <h2>Настройки подключения</h2>
 
-    <br><br>
+        <label for="idInstance">idInstance</label>
+        <input
+            type="text"
+            id="idInstance"
+            placeholder="Введите idInstance"
+        >
 
-    <label>
-        API Token:
-        <input type="password" id="apiToken">
-    </label>
+        <label for="apiToken">ApiTokenInstance</label>
+        <input
+            type="password"
+            id="apiToken"
+            placeholder="Введите ApiTokenInstance"
+        >
 
-    <br><br>
+    </div>
 
-    <button>getSettings</button>
-    <button>getStateInstance</button>
 
-    <h3>Ответ API:</h3>
+    <div class="card">
 
-    <textarea id="response" rows="15" cols="60" readonly></textarea>
+        <h2>Методы API</h2>
+
+        <button>getSettings</button>
+
+        <button>getStateInstance</button>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>Ответ API</h2>
+
+        <textarea
+            id="response"
+            readonly
+            placeholder="Здесь появится ответ API..."
+        ></textarea>
+
+    </div>
+
+</div>
 
 </body>
 </html>
