@@ -4,61 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GREEN-API Test</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
-
     <h1>GREEN-API</h1>
 
-    <div class="card">
-
-        <h2>Настройки подключения</h2>
+    <section class="card">
+        <h2>Подключение</h2>
 
         <label for="idInstance">idInstance</label>
-        <input
-            type="text"
-            id="idInstance"
-            placeholder="Введите idInstance"
-        >
+        <input type="text" id="idInstance" placeholder="Введите idInstance">
 
         <label for="apiToken">ApiTokenInstance</label>
-        <input
-            type="password"
-            id="apiToken"
-            placeholder="Введите ApiTokenInstance"
-        >
+        <input type="password" id="apiToken" placeholder="Введите ApiTokenInstance">
 
-    </div>
+        <button onclick="getSettings()">Get Settings</button>
+        <button onclick="getStateInstance()">Get State Instance</button>
+    </section>
 
+    <section class="card">
+        <h2>Send Message</h2>
 
-    <div class="card">
+        <label for="messagePhone">Номер получателя</label>
+        <input type="text" id="messagePhone" placeholder="Например: 77771234567">
 
-        <h2>Методы API</h2>
+        <label for="messageText">Сообщение</label>
+        <textarea id="messageText" placeholder="Введите сообщение"></textarea>
 
-        <button onclick="getSettings()">getSettings</button>
+        <button onclick="sendMessage()">Send Message</button>
+    </section>
 
-<button onclick="getStateInstance()">getStateInstance</button>
+    <section class="card">
+        <h2>Send File By URL</h2>
 
-    </div>
+        <label for="filePhone">Номер получателя</label>
+        <input type="text" id="filePhone" placeholder="Например: 77771234567">
 
+        <label for="fileUrl">URL файла</label>
+        <input type="text" id="fileUrl" placeholder="https://example.com/file.pdf">
 
-    <div class="card">
+        <label for="fileName">Имя файла</label>
+        <input type="text" id="fileName" placeholder="file.pdf">
 
+        <label for="fileCaption">Подпись</label>
+        <textarea id="fileCaption" placeholder="Необязательно"></textarea>
+
+        <button onclick="sendFileByUrl()">Send File By URL</button>
+    </section>
+
+    <section class="card">
         <h2>Ответ API</h2>
-
-        <textarea
-            id="response"
-            readonly
-            placeholder="Здесь появится ответ API..."
-        ></textarea>
-
-    </div>
-
+        <textarea id="response" readonly placeholder="Здесь появится ответ API"></textarea>
+    </section>
 </div>
+
 <script src="script.js"></script>
+
 </body>
 </html>
