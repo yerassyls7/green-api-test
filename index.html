@@ -1,66 +1,70 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GREEN-API Test</title>
+    <title>GREEN-API</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>GREEN-API</h1>
+    <div class="container">
 
-    <section class="card">
-        <h2>Подключение</h2>
+        <h1>GREEN-API</h1>
 
-        <label for="idInstance">idInstance</label>
-        <input type="text" id="idInstance" placeholder="Введите idInstance">
+        <div class="card">
+            <h2>Connection</h2>
 
-        <label for="apiToken">ApiTokenInstance</label>
-        <input type="password" id="apiToken" placeholder="Введите ApiTokenInstance">
+            <label for="idInstance">idInstance</label>
+            <input type="text" id="idInstance" placeholder="Enter idInstance">
 
-        <button onclick="getSettings()">Get Settings</button>
-        <button onclick="getStateInstance()">Get State Instance</button>
-    </section>
+            <label for="apiToken">ApiTokenInstance</label>
+            <input type="password" id="apiToken" placeholder="Enter ApiTokenInstance">
 
-    <section class="card">
-        <h2>Send Message</h2>
+            <div class="buttons">
+                <button onclick="getSettings()">Get Settings</button>
+                <button onclick="getStateInstance()">Get State Instance</button>
+            </div>
+        </div>
 
-        <label for="messagePhone">Номер получателя</label>
-        <input type="text" id="messagePhone" placeholder="Например: 77771234567">
+        <div class="card">
+            <h2>Send Message</h2>
 
-        <label for="messageText">Сообщение</label>
-        <textarea id="messageText" placeholder="Введите сообщение"></textarea>
+            <label for="messagePhone">Phone number</label>
+            <input type="text" id="messagePhone" placeholder="77712345678">
 
-        <button onclick="sendMessage()">Send Message</button>
-    </section>
+            <label for="messageText">Message</label>
+            <textarea id="messageText" placeholder="Enter message"></textarea>
 
-    <section class="card">
-        <h2>Send File By URL</h2>
+            <button onclick="sendMessage()">Send Message</button>
+        </div>
 
-        <label for="filePhone">Номер получателя</label>
-        <input type="text" id="filePhone" placeholder="Например: 77771234567">
+        <div class="card">
+            <h2>Send File By URL</h2>
 
-        <label for="fileUrl">URL файла</label>
-        <input type="text" id="fileUrl" placeholder="https://example.com/file.pdf">
+            <label for="filePhone">Phone number</label>
+            <input type="text" id="filePhone" placeholder="77712345678">
 
-        <label for="fileName">Имя файла</label>
-        <input type="text" id="fileName" placeholder="file.pdf">
+            <label for="fileUrl">File URL</label>
+            <input type="text" id="fileUrl" placeholder="https://example.com/file.jpg">
 
-        <label for="fileCaption">Подпись</label>
-        <textarea id="fileCaption" placeholder="Необязательно"></textarea>
+            <label for="fileName">File name</label>
+            <input type="text" id="fileName" placeholder="file.jpg">
 
-        <button onclick="sendFileByUrl()">Send File By URL</button>
-    </section>
+            <label for="fileCaption">Caption</label>
+            <input type="text" id="fileCaption" placeholder="Optional caption">
 
-    <section class="card">
-        <h2>Ответ API</h2>
-        <textarea id="response" readonly placeholder="Здесь появится ответ API"></textarea>
-    </section>
-</div>
+            <button onclick="sendFileByUrl()">Send File By URL</button>
+        </div>
 
-<script src="script.js"></script>
+        <div class="card">
+            <h2>Response</h2>
+            <textarea id="response" readonly></textarea>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
