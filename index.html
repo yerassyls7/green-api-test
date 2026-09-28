@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,52 +13,52 @@
         <h1>GREEN-API</h1>
 
         <div class="card">
-            <h2>Connection</h2>
+            <h2>Подключение</h2>
 
             <label for="idInstance">idInstance</label>
-            <input type="text" id="idInstance" placeholder="Enter idInstance">
+            <input type="text" id="idInstance" placeholder="Введите idInstance">
 
             <label for="apiToken">ApiTokenInstance</label>
-            <input type="password" id="apiToken" placeholder="Enter ApiTokenInstance">
+            <input type="password" id="apiToken" placeholder="Введите ApiTokenInstance">
 
             <div class="buttons">
-                <button onclick="getSettings()">Get Settings</button>
-                <button onclick="getStateInstance()">Get State Instance</button>
+                <button onclick="getSettings()">Получить настройки</button>
+                <button onclick="getStateInstance()">Получить состояние</button>
             </div>
         </div>
 
         <div class="card">
-            <h2>Send Message</h2>
+            <h2>Отправить сообщение</h2>
 
-            <label for="messagePhone">Phone number</label>
+            <label for="messagePhone">Номер телефона</label>
             <input type="text" id="messagePhone" placeholder="77712345678">
 
-            <label for="messageText">Message</label>
-            <textarea id="messageText" placeholder="Enter message"></textarea>
+            <label for="messageText">Сообщение</label>
+            <textarea id="messageText" placeholder="Введите сообщение"></textarea>
 
-            <button onclick="sendMessage()">Send Message</button>
+            <button onclick="sendMessage()">Отправить сообщение</button>
         </div>
 
         <div class="card">
-            <h2>Send File By URL</h2>
+            <h2>Отправить файл по URL</h2>
 
-            <label for="filePhone">Phone number</label>
+            <label for="filePhone">Номер телефона</label>
             <input type="text" id="filePhone" placeholder="77712345678">
 
-            <label for="fileUrl">File URL</label>
+            <label for="fileUrl">URL файла</label>
             <input type="text" id="fileUrl" placeholder="https://example.com/file.jpg">
 
-            <label for="fileName">File name</label>
+            <label for="fileName">Имя файла</label>
             <input type="text" id="fileName" placeholder="file.jpg">
 
-            <label for="fileCaption">Caption</label>
-            <input type="text" id="fileCaption" placeholder="Optional caption">
+            <label for="fileCaption">Подпись</label>
+            <input type="text" id="fileCaption" placeholder="Необязательно">
 
-            <button onclick="sendFileByUrl()">Send File By URL</button>
+            <button onclick="sendFileByUrl()">Отправить файл по URL</button>
         </div>
 
         <div class="card">
-            <h2>Response</h2>
+            <h2>Ответ</h2>
             <textarea id="response" readonly></textarea>
         </div>
 
